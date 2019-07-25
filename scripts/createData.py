@@ -20,6 +20,7 @@ def getArgs():
 
 args = getArgs()
 n = args.n
+print n
 length = args.l
 
 x = np.linspace(-5,5,length)
@@ -28,4 +29,4 @@ y = np.poly1d(coeffs)(x)+np.random.uniform(-20,20,length)
 
 OUT = open('n'+str(n)+'.txt','w')
 for i in range(len(x)):
-    OUT.write('%f\t%f\t%f\n' % (x[i],y[i],y[i]))
+    OUT.write('%f\t%f\n' % (x[i],y[i]))

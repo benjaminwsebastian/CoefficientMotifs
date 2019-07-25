@@ -12,11 +12,11 @@ import string,json,argparse
 
 def getArgs():
     parser = argparse.ArgumentParser(description="translate motif back into numbers, can scrape meme.hmtl for motif or take a motif", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--f",type=str,required=False,help="input data file (tab delimited)",default='')
-    parser.add_argument("--n",type=int,required=True,help="largest polynomial approx (x^1 to x^n)")
-    parser.add_argument("--symlog",type=bool,required=False,help="symlog the data",default=False)
+    parser.add_argument("--f",type=str,required=True,help="input data file (tab delimited)",default='')
     parser.add_argument("--o",type=str,required=True,help="output name")
-    parser.add_argument("--label",type=bool,required=False,help="label heatmap rows",default=True)
+    parser.add_argument("--n",type=int,required=False,help="Optional: largest polynomial approx (x^1 to x^n)",default=100)
+    parser.add_argument("--symlog",type=bool,required=False,help="Optional: symlog the data",default=False)
+    parser.add_argument("--label",type=bool,required=False,help="Optional: label heatmap rows",default=True)
     
     args = parser.parse_args()
     return args
@@ -24,7 +24,7 @@ def getArgs():
 def readDataFile(dataFile):
     xs,ys = [],[]
     for line in open(dataFile,'r'):
-        x,y,z = line.strip().split('\t')
+        x,y = line.strip().split('\t')
         xs.append(float(x))
         ys.append(float(y))
     return xs,ys
@@ -67,9 +67,7 @@ for i in range(highestPoly):
     polys[i] = np.poly1d(coeffs[i])
     errors.append( (i,np.sqrt(np.mean( (y-polys[i](x))**2 ))) )
 
-errors = sorted(errors,key=lambda p:p[1])
-
-bestFit = errors[0][0]
+base = errors[0][0]
 
 '''
 Plot overlayed figure
@@ -80,11 +78,11 @@ for i in polys:
     plt.plot(x,polys[i](x),'b-',alpha=0.1)
 
 plt.plot(x,y,'go',markersize = 1)
-plt.plot(x,polys[bestFit](x),'r-')
+plt.plot(x,polys[base](x),'r-')
 
 if symlog:
     plt.yscale('symlog')
-plt.title('%s %d \n%s %d %s %f' % ('Best Poly Fit With Highest Degree',highestPoly,'Best fit at n=',bestFit+1,'and error ',errors[0][1]))
+plt.title('%s %d' % ('Poly Fit With Highest Degree',highestPoly))
 plt.xlabel('x')
 plt.ylabel('y')
 
@@ -105,7 +103,7 @@ for poly in errors:
     chart.append( np.concatenate([ coeffs[poly[0]] , np.zeros(highestPoly-poly[0]-1) ]) ) # add coefficients and zero fill
 
 plt.subplot(212)
-sns.heatmap(chart,yticklabels=rowLabels,) # can add vmin= and vmax= for labeling the bar and center=0 cmap='Blues'
+sns.heatmap(chart,yticklabels=rowLabels,annot_kws={"size":2}) # can add vmin= and vmax= for labeling the bar and center=0 cmap='Blues'
 plt.xlabel("coefficients")
 plt.ylabel("highest degree (n)")
 plt.title("Heat Map of the Size of Coefficients For Each Polynomial up to "+str(n0))
@@ -115,7 +113,7 @@ Plot distribution of coefficients
 ''' 
 coeffsList = np.array([])
 for i in coeffs:
-    coeffsList = np.concatenate([ coeffsList, coeffs[i] ])
+    coeffsList = np.concatenate([ coeffsList, coeffs[i][0:i] ])
     
 plt.subplot(222)
 maxCoeff = max(coeffsList)
