@@ -1,8 +1,0 @@
-#!/bin/bash
-for i in {1..6}
-do
-    cd "$i/"
-    echo "n$i"_"n100"_"coeffSeqs.fasta"
-    meme "n$i_n100_coeffSeqs.fasta" -alph ../alphabet -oc memeOutput
-    cd ..
-done

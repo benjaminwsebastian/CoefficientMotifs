@@ -105,7 +105,7 @@ chart = []
 for poly in coeffs:
     if symlog:
         coeffs[coeffs.index(poly)] = symlogShift(poly)
-    chart.append( np.concatenate([ poly , np.zeros(highestPoly-len(poly)+1) ]) ) # add coefficients and zero fill
+    chart.append( np.concatenate([ poly[::-1] , np.zeros(highestPoly-len(poly)+1) ]) ) # add coefficients in reverve order so they are smallest to largest with respect to their powers and zero fill
 
 plt.subplot(212)
 sns.heatmap(chart,yticklabels=False,annot_kws={"size":2}) # can add vmin= and vmax= for labeling the bar, center=0 for making the bar centered at 0, cmap='Blues' for an alternative color scheme, can define rowLabels and set yticklabels=rowLabels but not advised because it gets crowded quickly
