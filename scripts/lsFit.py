@@ -6,6 +6,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import string,json,argparse
 
+# TODO: put the poly in coeffs > poly[x] to coeffs[poly][x] OR change coeffs into a list -- see if doing that affects other parts of the code
+
+'''
+This script takes an tab delimited file of 2D data.
+
+It does three things:
+
+(1) Fits polynomials, from c*x to C*SUM(x^n) (1 <= n < infinity and C is a lower diagonal coefficient matrix) for a given max n, to the 2D data.
+
+(2) Creates a histogram of the coefficients, a heatmap of the coefficients, and overlays plots of the fitted polynomials along with the original data. (The axis of the overlay plot are scaled using symlog as Runge's phenomenon is observed in overfitting leading to an exponentially increasing range.
+
+(3) Bins the coefficients into 26 bins then assigns each bin a letter in A to Z, with each successive bin being the next letter in the alphabet. So the sequence of coefficients is turned into a sequence of letters. These are then printed in fasta format so the program "meme" (part of the MEME Suite, a motif-based sequence analysis tool which can detect denovo motifs- specifically made for DNA or RNA sequences [but a different alphabet can be supplied, which is what I do]) can be run on it.
+'''
 ###########
 ## INPUT ##
 ###########
@@ -58,16 +71,16 @@ highestPoly = n0
 
 errors = []
 polys = {}
-coeffs = {}
+coeffs = []
 
 x,y = readDataFile(dataFile)
 
+'''
+Fit the polynomials to the data
+'''
 for i in range(highestPoly):
-    coeffs[i] = np.polyfit(x,y,i+1)
+    coeffs.append(np.polyfit(x,y,i+1))
     polys[i] = np.poly1d(coeffs[i])
-    errors.append( (i,np.sqrt(np.mean( (y-polys[i](x))**2 ))) )
-
-base = errors[0][0]
 
 '''
 Plot overlayed figure
@@ -78,7 +91,6 @@ for i in polys:
     plt.plot(x,polys[i](x),'b-',alpha=0.1)
 
 plt.plot(x,y,'go',markersize = 1)
-plt.plot(x,polys[base](x),'r-')
 
 if symlog:
     plt.yscale('symlog')
@@ -89,21 +101,14 @@ plt.ylabel('y')
 '''
 Plot heatmap of coefficients
 '''
-rowLabels = []
-if label:
-    for poly in errors:
-        rowLabels.append(str(poly[0]+1))
-else:
-    rowLabels = False
-        
 chart = []
-for poly in errors:
+for poly in coeffs:
     if symlog:
-        coeffs[poly[0]] = symlogShift(coeffs[poly[0]])
-    chart.append( np.concatenate([ coeffs[poly[0]] , np.zeros(highestPoly-poly[0]-1) ]) ) # add coefficients and zero fill
+        coeffs[coeffs.index(poly)] = symlogShift(poly)
+    chart.append( np.concatenate([ poly , np.zeros(highestPoly-len(poly)+1) ]) ) # add coefficients and zero fill
 
 plt.subplot(212)
-sns.heatmap(chart,yticklabels=rowLabels,annot_kws={"size":2}) # can add vmin= and vmax= for labeling the bar and center=0 cmap='Blues'
+sns.heatmap(chart,yticklabels=False,annot_kws={"size":2}) # can add vmin= and vmax= for labeling the bar, center=0 for making the bar centered at 0, cmap='Blues' for an alternative color scheme, can define rowLabels and set yticklabels=rowLabels but not advised because it gets crowded quickly
 plt.xlabel("coefficients")
 plt.ylabel("highest degree (n)")
 plt.title("Heat Map of the Size of Coefficients For Each Polynomial up to "+str(n0))
@@ -112,8 +117,8 @@ plt.title("Heat Map of the Size of Coefficients For Each Polynomial up to "+str(
 Plot distribution of coefficients
 ''' 
 coeffsList = np.array([])
-for i in coeffs:
-    coeffsList = np.concatenate([ coeffsList, coeffs[i][0:i] ])
+for polyIndex in range(len(coeffs)):
+    coeffsList = np.concatenate([ coeffsList, coeffs[polyIndex][0:polyIndex] ]) # only adding to the ith term because the remaining is zero-filled and keeping those would skew the histogram.
     
 plt.subplot(222)
 maxCoeff = max(coeffsList)
@@ -127,15 +132,14 @@ plt.tight_layout()
 plt.savefig(outName+'_n'+str(n0)+'.pdf')
 
 '''
-Transform coeff data into letters then print to fasta file so I can run meme on it
+Transform coeff data into a sequence of letters then print to fasta file
 '''
-
 alphabet=string.ascii_letters
 seqs = []
-for i in chart:
+for i in chart: # i is the sequence of coefficients corresponding to one fitted polynomial
     seq = []
     for j in range(len(i)):
-        for k in range(len(bins)-1):
+        for k in range(len(bins)-1): # Loop through alphabet to determine the bin for coefficient "chart[i][j]"
             if i[j] >= bins[k] and i[j] <= bins[k+1]:
                 seq.append(alphabet[k])
     seq = ''.join(seq)
@@ -143,7 +147,7 @@ for i in chart:
 
 OUT = open(outName+'_n'+str(n0)+'_coeffSeqs.fasta','w')
 for i in range(len(seqs)):
-    OUT.write('>%d\n%s\n' % (errors[i][0]+1,seqs[i]))
+    OUT.write('>%d\n%s\n' % (i+1,seqs[i]))
 
 OUT = open(outName+'_n'+str(n0)+'_bins.json','w')
 json.dump(bins.tolist(),OUT)

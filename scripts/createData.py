@@ -24,9 +24,9 @@ print n
 length = args.l
 
 x = np.linspace(-5,5,length)
-coeffs = np.random.uniform(-20,20,n)
-y = np.poly1d(coeffs)(x)+np.random.uniform(-20,20,length)
+coeffs = np.random.uniform(-20,20,n+1) # Define a random polynomial of highest degree n
+y = np.poly1d(coeffs)(x)+np.random.uniform(-20,20,length) # Get polynomial points and add uniform noise
 
-OUT = open('n'+str(n)+'.txt','w')
+OUT = open('n'+str(n)+'.txt','w') # Print the data
 for i in range(len(x)):
     OUT.write('%f\t%f\n' % (x[i],y[i]))

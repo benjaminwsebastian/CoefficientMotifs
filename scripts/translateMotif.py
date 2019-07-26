@@ -3,6 +3,10 @@ import string,json,argparse
 import numpy as np
 from bs4 import BeautifulSoup
 
+'''
+This script reads the meme output file and prints the motif as a sequence of values (within some error eps=max{len(Bin[0]),len(bin[len(bins)-1])}.
+'''
+
 ###########
 ## INPUT ##
 ###########
@@ -38,7 +42,7 @@ def unlog10(arr):
         unlogged.append(sgn*(10**coeff))
     return unlogged
 
-def findMotif(fileName):
+def findMotifInfo(fileName):
     with open(fileName,'r') as f:
         contents = f.read()
 
@@ -47,9 +51,11 @@ def findMotif(fileName):
         frontTrimmed = text.rsplit('=')[1][1:] # Have to trim because meme didn't format the html output nicely
         backTrimmed = frontTrimmed.rsplit(';')[0]
         info = json.loads(backTrimmed)
+        
         motif = info['motifs'][0]['id']
-
-        return motif
+        nsites = info['motifs'][0]['nsites']
+    
+        return motif,nsites
     
 ##########
 ## MAIN ##
@@ -66,7 +72,7 @@ IN = open(binsFile)
 bins = json.load(IN)
 
 if fileName != '':
-    motif = findMotif(fileName)
+    motif,nsites = findMotifInfo(fileName)
 
 approx = []
 for element in motif:
@@ -74,7 +80,7 @@ for element in motif:
     approx.append((bins[index]+bins[index+1])/2.0)
 
 
-print 'motif:',motif
+print 'motif: %s\nNsites: %s' % (motif,nsites)
 
 if unlog:
     print unlog10(approx)

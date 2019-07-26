@@ -84,13 +84,13 @@ Sequence name            Weight Length  Sequence name            Weight Length
 41                       1.0000    101  42                       1.0000    101  
 43                       1.0000    101  44                       1.0000    101  
 45                       1.0000    101  46                       1.0000    101  
-47                       1.0000    101  48                       1.0000    101  
-49                       1.0000    101  50                       1.0000    101  
-51                       1.0000    101  52                       1.0000    101  
-53                       1.0000    100  54                       1.0000    100  
-55                       1.0000    100  56                       1.0000    100  
-57                       1.0000    100  58                       1.0000    100  
-59                       1.0000    100  60                       1.0000    100  
+47                       1.0000    101  48                       1.0000    100  
+49                       1.0000    100  50                       1.0000    100  
+51                       1.0000    100  52                       1.0000    101  
+53                       1.0000    101  54                       1.0000    101  
+55                       1.0000    101  56                       1.0000    101  
+57                       1.0000    101  58                       1.0000    101  
+59                       1.0000    101  60                       1.0000    101  
 61                       1.0000    101  62                       1.0000    101  
 63                       1.0000    101  64                       1.0000    101  
 65                       1.0000    101  66                       1.0000    101  
@@ -130,344 +130,357 @@ theta:  spmap=         uni    spfuzz=   0.0769231
 em:     prior=   dirichlet    b=            0.01    maxiter=        50
         distance=    1e-05
 trim:   wg=             11    ws=              1    endgaps=       yes
-data:   n=           10092    N=             100
+data:   n=           10096    N=             100
 sample: seed=            0    hsfrac=          0
-        searchsize=  10092    norand=         no    csites=       1000
+        searchsize=  10096    norand=         no    csites=       1000
 Letter frequencies in dataset:
-a 0.000595 b 0.000198 c 0.000396 d 0.000991 e 0.00258 f 0.00535 g 0.00396 h 0.00476 i 0.00555 
-j 0.00168 k 0.00198 l 0.00694 m 0.023 n 0.908 o 0.00832 p 0.00198 q 0.00337 r 0.00555 
-s 0.00178 t 0.000892 u 0.00139 v 0.00416 w 0.00277 x 0.00159 y 0.00198 z 0 
+a 0.000396 b 0.000396 c 0 d 0.000198 e 0.000594 f 0.000594 g 0.000198 h 0.00119 i 0.00267 
+j 0.00376 k 0.00396 l 0.0217 m 0.939 n 0.013 o 0.00535 p 0.00139 q 0.00139 r 0.00099 
+s 0.00139 t 0.000594 u 0 v 0.000198 w 0 x 0.000396 y 0.000396 z 0 
 Background letter frequencies (from file dataset with add-one prior applied):
-a 0.000692 b 0.000297 c 0.000494 d 0.00109 e 0.00267 f 0.00544 g 0.00405 h 0.00484 i 0.00563 
-j 0.00178 k 0.00208 l 0.00702 m 0.023 n 0.906 o 0.0084 p 0.00208 q 0.00346 r 0.00563 
-s 0.00188 t 0.000988 u 0.00148 v 0.00425 w 0.00287 x 0.00168 y 0.00208 z 9.88e-05 
+a 0.000494 b 0.000494 c 9.88e-05 d 0.000296 e 0.000692 f 0.000692 g 0.000296 h 0.00128 i 0.00277 
+j 0.00385 k 0.00405 l 0.0217 m 0.937 n 0.013 o 0.00543 p 0.00148 q 0.00148 r 0.00109 
+s 0.00148 t 0.000692 u 9.88e-05 v 0.000296 w 9.88e-05 x 0.000494 y 0.000494 z 9.88e-05 
 Background model order: 0
 ********************************************************************************
 
 
 ********************************************************************************
-MOTIF mlrrefyvfionm MEME-1	width =  13  sites =  67  llr = 3066  E-value = 2.9e-979
+MOTIF mnmlmomjmmlm MEME-1	width =  12  sites =  72  llr = 1491  E-value = 4.8e-348
 ********************************************************************************
 --------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 Description
+	Motif mnmlmomjmmlm MEME-1 Description
 --------------------------------------------------------------------------------
-Simplified        a  ::::::1::::::
-pos.-specific     b  :::::::::::::
-probability       c  :::::1:::::::
-matrix            d  :::::1:::::::
-                  e  ::::31:::::::
-                  f  ::::14::3::::
-                  g  ::::22::3::::
-                  h  ::::11::23:::
-                  i  ::::::::17:::
-                  j  ::::::::1::::
-                  k  :11:1::::::::
-                  l  35::1::::::::
-                  m  44::::::::::a
-                  n  2:1:::::::1a:
-                  o  1:1:::::::9::
-                  p  ::11:::::::::
-                  q  ::22:::::::::
-                  r  ::34::1::::::
-                  s  :::1::1::::::
-                  t  :::1:::::::::
-                  u  ::::1:11:::::
-                  v  ::::1:14:::::
-                  w  ::::::13:::::
-                  x  ::::::11:::::
-                  y  ::::::3::::::
-                  z  :::::::::::::
+Simplified        a  ::::1:::::::
+pos.-specific     b  ::::1:::::::
+probability       c  ::::::::::::
+matrix            d  ::::::::::::
+                  e  :::::::1::::
+                  f  ::::::::1:::
+                  g  ::::::::::::
+                  h  :::1::::::::
+                  i  :::1:::3::::
+                  j  :::2:::3::::
+                  k  1::2::11::::
+                  l  :1232:121:73
+                  m  83614:6:7628
+                  n  :41:211:141:
+                  o  :2:::31:::::
+                  p  :1:::1::::::
+                  q  :::::2::::::
+                  r  :::::1::::::
+                  s  ::1::1::::::
+                  t  :::::1::::::
+                  u  ::::::::::::
+                  v  ::::::::::::
+                  w  ::::::::::::
+                  x  ::::::::::::
+                  y  ::::::1:::::
+                  z  ::::::::::::
 
-         bits   13.3              
-                12.0              
-                10.6              
-                 9.3              
-Relative         8.0              
-Entropy          6.7    *   * *   
-(66.0 bits)      5.3  ********** *
-                 4.0 *********** *
-                 2.7 *********** *
-                 1.3 *********** *
-                 0.0 -------------
+         bits   13.3             
+                12.0             
+                10.6             
+                 9.3             
+Relative         8.0             
+Entropy          6.7             
+(29.9 bits)      5.3      * *    
+                 4.0    * * *    
+                 2.7  * *** *  * 
+                 1.3  ********** 
+                 0.0 ------------
 
-Multilevel           mlrrefyvfionm
-consensus            lmqq   wgh   
-sequence                     h    
-                                  
-                                  
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 sites sorted by position p-value
---------------------------------------------------------------------------------
-Sequence name             Start   P-value                Site   
--------------             ----- ---------            -------------
-91                           80  4.23e-26 nnnnnnnnnn llrrefyvfionm nnnnnnnnn 
-90                           79  4.23e-26 nnnnnnnnnn llrrefyvfionm nnnnnnnnnn
-89                           78  4.23e-26 nnnnnnnnnn llrrefyvfionm nnnnnnnnnn
-84                           73  4.23e-26 nnnnnnnnnn llrrefywfionm nnnnnnnnnn
-83                           72  4.23e-26 nnnnnnnnnn llrrefywfionm nnnnnnnnnn
-82                           71  4.23e-26 nnnnnnnnnn llrrefyvfionm nnnnnnnnnn
-81                           70  4.23e-26 nnnnnnnnnn llrrefyvfionm nnnnnnnnnn
-70                           59  1.07e-25 nnnnnnnnnn llrsedyxfhonm nnnnnnnnnn
-69                           58  1.07e-25 nnnnnnnnnn llrsedyxfhonm nnnnnnnnnn
-68                           57  1.07e-25 nnnnnnnnnn llrsedyxfhonm nnnnnnnnnn
-43                           32  1.51e-25 nnnnnnnnnn llrrefxvgionm nnnnnnnnnn
-88                           77  1.72e-24 nnnnnnnnnn lmrrefyvfionm nnnnnnnnnn
-87                           76  1.72e-24 nnnnnnnnnn lmrrefyvfionm nnnnnnnnnn
-80                           69  1.72e-24 nnnnnnnnnn lmrrefyvfionm nnnnnnnnnn
-42                           31  1.72e-24 nnnnnnnnnn llrseexwgionm nnnnnnnnnn
-79                           68  4.98e-24 nnnnnnnnnn lmrrefxvgionm nnnnnnnnnn
-86                           75  1.06e-23 nnnnnnnnnn lmrqegyvfionm nnnnnnnnnn
-85                           74  1.06e-23 nnnnnnnnnn lmrqegyvfionm nnnnnnnnnn
-78                           67  2.59e-23 nnnnnnnnnn lmrqegxvgionm nnnnnnnnnn
-67                           56  2.59e-23 nnnnnnnnnn llssddyxfhonm nnnnnnnnnn
-66                           55  2.59e-23 nnnnnnnnnn llssddyxfhonm nnnnnnnnnn
-48                           37  2.59e-23 nnnnnnnnnn mlqtgdwxghonm nnnnnnnnnn
-51                           40  5.77e-23 nnnnnnnnnn mlqrgfvvhionm nnnnnnnnnn
-44                           33  5.77e-23 nnnnnnnnnn mlqrffwvgionm nnnnnnnnnn
-49                           38  6.94e-23 nnnnnnnnnn mlqsgewwgionm nnnnnnnnnn
-47                           36  8.34e-23 nnnnnnnnnn mlqtgdvxhhonm nnnnnnnnnn
-39                           28  1.39e-22 nnnnnnnnnn mkqtgcwxhhonm nnnnnnnnnn
-52                           41  1.92e-22 nnnnnnnnnn mlqrhfvvhionm nnnnnnnnnn
-50                           39  1.92e-22 nnnnnnnnnn mlqsgevwhionm nnnnnnnnnn
-38                           27  1.92e-22 nnnnnnnnnn mlqqggwuhionm nnnnnnnnnn
-57                           45  2.60e-22 nnnnnnnnnn omkqufawghonm nnnnnnnnnn
-61                           50  3.46e-22 nnnnnnnnnn mmqrgfvvhionm nnnnnnnnnn
-77                           66  3.97e-22 nnnnnnnnnn mmqqggwvgionm nnnnnnnnnn
-76                           65  3.97e-22 nnnnnnnnnn mmqqggwvgionm nnnnnnnnnn
-71                           60  4.54e-22 nnnnnnnnnn lmrpehyufjonm nnnnnnnnnn
-58                           46  5.87e-22 nnnnnnnnnn omkqugawghonm nnnnnnnnnn
-56                           44  6.63e-22 nnnnnnnnnn omkqvfawghonm nnnnnnnnnn
-63                           52  7.47e-22 nnnnnnnnnn mlprhevwhionm nnnnnnnnnn
-75                           64  8.40e-22 nnnnnnnnnn mmqqfgwvgionm nnnnnnnnnn
-65                           54  8.40e-22 nnnnnnnnnn mlpsiduxhhonm nnnnnnnnnn
-62                           51  1.18e-21 nnnnnnnnnn mmprhfvvhionm nnnnnnnnnn
-64                           53  1.32e-21 nnnnnnnnnn mlprieuwhionm nnnnnnnnnn
-46                           35  1.32e-21 nnnnnnnnnn mkqtgcvyhhonm nnnnnnnnnn
-45                           34  1.32e-21 nnnnnnnnnn mkqtfcwyghonm nnnnnnnnnn
-41                           30  1.32e-21 nnnnnnnnnn mlpsheuwiionm nnnnnnnnnn
-40                           29  1.63e-21 nnnnnnnnnn mkpthcuxihonm nnnnnnnnnn
-74                           63  2.48e-21 nnnnnnnnnn mmqpfhwugionm nnnnnnnnnn
-73                           62  2.48e-21 nnnnnnnnnn mmrpfhxugionm nnnnnnnnnn
-55                           43  3.07e-21 nnnnnnnnnn omkpvhavhhonm nnnnnnnnnn
-53                           41  5.42e-21 nnnnnnnnnn omjqvhavhhonm nnnnnnnnnn
-54                           42  6.91e-21 nnnnnnnnnn omjpvhavhhonm nnnnnnnnnn
-100                          89  8.91e-21 nnnnnnnnnn mmoqjftviionm           
-72                           61  8.91e-21 nnnnnnnnnn mmrpfhxugjonm nnnnnnnnnn
-59                           47  2.23e-20 nnnnnnnnnn nmkqugbwghonm nnnnnnnnnn
-60                           48  2.90e-20 nnnnnnnnnn nmkqugbvhhonm nnnnnnnnnn
-97                           86  3.30e-20 nnnnnnnnnn nlorkfswiionm nnn       
-96                           85  3.30e-20 nnnnnnnnnn nlorkfswiionm nnnn      
-98                           87  5.45e-20 nnnnnnnnnn nlorjfswiionm nn        
-35                           24  1.64e-19 nnnnnnnnnn mlorkfrvjinnm nnnnnnnnnn
-99                           88  1.99e-19 nnnnnnnnnn nmoqjfsviionm n         
-34                           23  4.18e-17 nnnnnnnnnn mmopkirtjjnnm nnnnnnnnnn
-95                           84  5.52e-17 nnnnnnnnnn nlnrkfrwjinnm nnnnn     
-94                           83  5.52e-17 nnnnnnnnnn nlnrkfrwjinnm nnnnnn    
-93                           82  1.47e-16 nnnnnnnnnn nlnrlfrwjinnm nnnnnnn   
-92                           81  1.47e-16 nnnnnnnnnn nlnrlfrvjinnm nnnnnnnn  
-36                           25  4.18e-16 nnnnnnnnnn nlnrlfqvkinnm nnnnnnnnnn
-37                           26  7.35e-16 nnnnnnnnnn nlnqlgqukinnm nnnnnnnnnn
+Multilevel           mnmlmomjmmlm
+consensus             m  n  i nml
+sequence              o          
+                                 
+                                 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 block diagrams
+	Motif mnmlmomjmmlm MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                Site  
+-------------             ----- ---------            ------------
+42                           31  6.05e-27 mmmmmmmmnm knsjbqyjfnnl mmmmmmmmmm
+43                           32  5.17e-26 mmmmmmmmnm knskbpykfnnl mmmmmmmmmm
+52                           41  1.19e-25 mmmmmmmmmm knskboykfnnl mmmmmmmmmm
+44                           33  9.53e-23 mmmmmmmmmm knqkepvkhnnl mmmmmmmmmm
+51                           40  2.56e-21 mmmmmmmmnm knskaokennlm mmmmmmmmmm
+50                           39  1.68e-19 mmmmmmmmnm knslaolennlm mmmmmmmmmm
+49                           38  3.06e-18 mmmmmmmmnm jntlaolennlm mmmmmmmmmm
+41                           30  6.83e-18 mmmmmmmmmm mnljoqkjnnll mmmmmmmmmm
+40                           29  6.83e-18 mmmmmmmmmm mnljoqkjnnll mmmmmmmmmm
+55                           44  8.62e-17 mmmmmmmmmm klrodkxoflnl mmmmmmmmmm
+53                           42  1.84e-16 mmmmmmmmmm klsobjyoflnm mmmmmmmmmm
+54                           43  1.40e-15 mmmmmmmmmm klrodjxoflnm mmmmmmmmmm
+60                           50  5.85e-15 mmmmmmmmml monhlsnimnlm mmmmmmmmmm
+62                           52  2.34e-14 mmmmmmmmml mplhntmimnlm mmmmmmmmmm
+61                           51  3.29e-14 mmmmmmmmml molhnsmimnlm mmmmmmmmmm
+56                           46  2.85e-13 mmmmmmmmmm lnojkqojlmlm mmmmmmmmmm
+47                           37  2.85e-13 mmmmmmmmml mplhnslimmlm mmmmmmmmmm
+58                           48  3.94e-13 mmmmmmmmml lonilroimmlm mmmmmmmmmm
+48                           37  3.94e-13 mmmmmmmmnm jmtlanlemnlm mmmmmmmmmm
+57                           47  7.42e-13 mmmmmmmmmm lnnjlqojmmlm mmmmmmmmmm
+59                           49  1.39e-12 mmmmmmmmml monilrnimmlm mmmmmmmmmm
+91                           81  6.46e-12 mmmmmmmmml molinrmimmlm mmmmmmmmm 
+90                           80  6.46e-12 mmmmmmmmml molinrmimmlm mmmmmmmmmm
+89                           79  7.50e-12 mmmmmmmmmm moljnqmjmmlm mmmmmmmmmm
+63                           53  2.44e-11 mmmmmmmmml mpmhmtmimnlm mmmmmmmmmm
+65                           55  2.82e-11 mmmmmmmmml mpmgmtmimnlm mmmmmmmmmm
+64                           54  2.82e-11 mmmmmmmmml mpmgmtmimnlm mmmmmmmmmm
+77                           67  3.25e-11 mmmmmmmmml momhmsmimnlm mmmmmmmmmm
+76                           66  3.25e-11 mmmmmmmmml momhmsmimnlm mmmmmmmmmm
+75                           65  3.25e-11 mmmmmmmmml momhmsmimnlm mmmmmmmmmm
+74                           64  3.25e-11 mmmmmmmmml momhmsmimnlm mmmmmmmmmm
+46                           36  3.25e-11 mmmmmmmmml mpmhnsmimmlm mmmmmmmmmm
+36                           25  3.74e-11 mmmmmmmmmm mmllooklnmll mmmmmmmmmm
+73                           63  6.58e-11 mmmmmmmmml momimrmimnlm mmmmmmmmmm
+72                           62  6.58e-11 mmmmmmmmml momimrmimnlm mmmmmmmmmm
+88                           78  1.00e-10 mmmmmmmmmm momjnqmjmmlm mmmmmmmmmm
+87                           77  1.52e-10 mmmmmmmmmm mnmjnqmjmmlm mmmmmmmmmm
+33                           23  1.74e-10 mmmmmmmmmm mnmknpmjmmlm mmmmmmmmmm
+32                           22  1.74e-10 mmmmmmmmmm mnmknpmjmmlm mmmmmmmmmm
+35                           23  2.63e-10 mmmmmmmmmm mmmlloojlnml lmmmmmmmmm
+39                           28  9.85e-10 mmmmmmmmmm mnmjmqmjmnml mmmmmmmmmm
+99                           86  1.28e-09 mmmmmmmmmm mmmllomjmoll mmmm      
+100                          87  1.86e-09 mmmmmmmmmm mmmlmomjnoll mmm       
+71                           61  3.09e-09 mmmmmmmmmm momimrmjmmlm mmmmmmmmmm
+70                           60  3.09e-09 mmmmmmmmmm momimrmjmmlm mmmmmmmmmm
+95                           83  4.49e-09 mmmmmmmmmm mnmklonllmmm lmmmmmm   
+94                           82  4.49e-09 mmmmmmmmmm mnmklonllmmm lmmmmmmm  
+93                           81  4.49e-09 mmmmmmmmmm mnmklonllmmm lmmmmmmmm 
+86                           76  4.49e-09 mmmmmmmmmm mnmjmqmjmmlm mmmmmmmmmm
+69                           59  4.49e-09 mmmmmmmmmm mnmjmqmjmmlm mmmmmmmmmm
+68                           58  4.49e-09 mmmmmmmmmm mnmjmqmjmmlm mmmmmmmmmm
+67                           57  5.07e-09 mmmmmmmmmm mnmkmpmjmmlm mmmmmmmmmm
+66                           56  5.07e-09 mmmmmmmmmm mnmkmpmjmmlm mmmmmmmmmm
+37                           25  5.07e-09 mmmmmmmmmm mmmllonkmnml lmmmmmmmmm
+45                           34  7.25e-09 mmmmmmmmmm kmqmenvmhmnl mmmmmmmmmm
+85                           75  1.04e-08 mmmmmmmmmm mnmkmpmkmmlm mmmmmmmmmm
+84                           74  1.04e-08 mmmmmmmmmm mnmkmpmkmmlm mmmmmmmmmm
+97                           86  1.88e-08 mmmmmmmmmm nmllnomllmml mmmm      
+92                           80  3.02e-08 mmmmmmmmmm mnmklonlmmmm lmmmmmmmmm
+34                           22  3.02e-08 mmmmmmmmmm mmmlmonjmnml lmmmmmmmmm
+96                           85  9.16e-08 mmmmmmmmmm nmllnnmllmml mmmmm     
+98                           87  6.71e-07 mmmmmmmmmm mmllmomllmml mmm       
+83                           73  1.50e-06 mmmmmmmmmm mmmlmomkmmlm mmmmmmmmmm
+82                           72  1.50e-06 mmmmmmmmmm mmmlmomkmmlm mmmmmmmmmm
+29                           20  2.81e-06 mmmmmmmmmm mmmlnollmmmm mmmmmmmmmm
+28                           19  2.81e-06 mmmmmmmmmm mmmlnollmmmm mmmmmmmmmm
+27                           18  3.43e-06 mmmmmmmmmm mmmllomllmmm mmmmmmmmmm
+79                           69  6.59e-05 mmmmmmmmmm mlmmmnmlmmlm mmmmmmmmmm
+78                           68  6.59e-05 mmmmmmmmmm mlmmmnmlmmlm mmmmmmmmmm
+30                           21  7.86e-05 mmmmmmmmmm mmmlmomlmmmm mmmmmmmmmm
+81                           71  1.13e-04 mmmmmmmmmm mmmmmnmkmmlm mmmmmmmmmm
+80                           70  1.13e-04 mmmmmmmmmm mmmmmnmkmmlm mmmmmmmmmm
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif mnmlmomjmmlm MEME-1 block diagrams
 --------------------------------------------------------------------------------
 SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
 -------------            ----------------  -------------
-91                                4.2e-26  79_[1]_9
-90                                4.2e-26  78_[1]_10
-89                                4.2e-26  77_[1]_11
-84                                4.2e-26  72_[1]_16
-83                                4.2e-26  71_[1]_17
-82                                4.2e-26  70_[1]_18
-81                                4.2e-26  69_[1]_19
-70                                1.1e-25  58_[1]_30
-69                                1.1e-25  57_[1]_31
-68                                1.1e-25  56_[1]_32
-43                                1.5e-25  31_[1]_57
-88                                1.7e-24  76_[1]_12
-87                                1.7e-24  75_[1]_13
-80                                1.7e-24  68_[1]_20
-42                                1.7e-24  30_[1]_58
-79                                  5e-24  67_[1]_21
-86                                1.1e-23  74_[1]_14
-85                                1.1e-23  73_[1]_15
-78                                2.6e-23  66_[1]_22
-67                                2.6e-23  55_[1]_33
-66                                2.6e-23  54_[1]_34
-48                                2.6e-23  36_[1]_52
-51                                5.8e-23  39_[1]_49
-44                                5.8e-23  32_[1]_56
-49                                6.9e-23  37_[1]_51
-47                                8.3e-23  35_[1]_53
-39                                1.4e-22  27_[1]_61
-52                                1.9e-22  40_[1]_48
-50                                1.9e-22  38_[1]_50
-38                                1.9e-22  26_[1]_62
-57                                2.6e-22  44_[1]_43
-61                                3.5e-22  49_[1]_39
-77                                  4e-22  65_[1]_23
-76                                  4e-22  64_[1]_24
-71                                4.5e-22  59_[1]_29
-58                                5.9e-22  45_[1]_42
-56                                6.6e-22  43_[1]_44
-63                                7.5e-22  51_[1]_37
-75                                8.4e-22  63_[1]_25
-65                                8.4e-22  53_[1]_35
-62                                1.2e-21  50_[1]_38
-64                                1.3e-21  52_[1]_36
-46                                1.3e-21  34_[1]_54
-45                                1.3e-21  33_[1]_55
-41                                1.3e-21  29_[1]_59
-40                                1.6e-21  28_[1]_60
-74                                2.5e-21  62_[1]_26
-73                                2.5e-21  61_[1]_27
-55                                3.1e-21  42_[1]_45
-53                                5.4e-21  40_[1]_47
-54                                6.9e-21  41_[1]_46
-100                               8.9e-21  88_[1]
-72                                8.9e-21  60_[1]_28
-59                                2.2e-20  46_[1]_41
-60                                2.9e-20  47_[1]_40
-97                                3.3e-20  85_[1]_3
-96                                3.3e-20  84_[1]_4
-98                                5.4e-20  86_[1]_2
-35                                1.6e-19  23_[1]_65
-99                                  2e-19  87_[1]_1
-34                                4.2e-17  22_[1]_66
-95                                5.5e-17  83_[1]_5
-94                                5.5e-17  82_[1]_6
-93                                1.5e-16  81_[1]_7
-92                                1.5e-16  80_[1]_8
-36                                4.2e-16  24_[1]_64
-37                                7.3e-16  25_[1]_63
+42                                6.1e-27  30_[1]_59
+43                                5.2e-26  31_[1]_58
+52                                1.2e-25  40_[1]_49
+44                                9.5e-23  32_[1]_57
+51                                2.6e-21  39_[1]_49
+50                                1.7e-19  38_[1]_50
+49                                3.1e-18  37_[1]_51
+41                                6.8e-18  29_[1]_60
+40                                6.8e-18  28_[1]_61
+55                                8.6e-17  43_[1]_46
+53                                1.8e-16  41_[1]_48
+54                                1.4e-15  42_[1]_47
+60                                5.8e-15  49_[1]_40
+62                                2.3e-14  51_[1]_38
+61                                3.3e-14  50_[1]_39
+56                                2.9e-13  45_[1]_44
+47                                2.9e-13  36_[1]_53
+58                                3.9e-13  47_[1]_42
+48                                3.9e-13  36_[1]_52
+57                                7.4e-13  46_[1]_43
+59                                1.4e-12  48_[1]_41
+91                                6.5e-12  80_[1]_9
+90                                6.5e-12  79_[1]_10
+89                                7.5e-12  78_[1]_11
+63                                2.4e-11  52_[1]_37
+65                                2.8e-11  54_[1]_35
+64                                2.8e-11  53_[1]_36
+77                                3.2e-11  66_[1]_23
+76                                3.2e-11  65_[1]_24
+75                                3.2e-11  64_[1]_25
+74                                3.2e-11  63_[1]_26
+46                                3.2e-11  35_[1]_54
+36                                3.7e-11  24_[1]_65
+73                                6.6e-11  62_[1]_27
+72                                6.6e-11  61_[1]_28
+88                                  1e-10  77_[1]_12
+87                                1.5e-10  76_[1]_13
+33                                1.7e-10  22_[1]_67
+32                                1.7e-10  21_[1]_68
+35                                2.6e-10  22_[1]_67
+39                                9.9e-10  27_[1]_62
+99                                1.3e-09  85_[1]_4
+100                               1.9e-09  86_[1]_3
+71                                3.1e-09  60_[1]_29
+70                                3.1e-09  59_[1]_30
+95                                4.5e-09  82_[1]_7
+94                                4.5e-09  81_[1]_8
+93                                4.5e-09  80_[1]_9
+86                                4.5e-09  75_[1]_14
+69                                4.5e-09  58_[1]_31
+68                                4.5e-09  57_[1]_32
+67                                5.1e-09  56_[1]_33
+66                                5.1e-09  55_[1]_34
+37                                5.1e-09  24_[1]_65
+45                                7.3e-09  33_[1]_56
+85                                  1e-08  74_[1]_15
+84                                  1e-08  73_[1]_16
+97                                1.9e-08  85_[1]_4
+92                                  3e-08  79_[1]_10
+34                                  3e-08  21_[1]_68
+96                                9.2e-08  84_[1]_5
+98                                6.7e-07  86_[1]_3
+83                                1.5e-06  72_[1]_17
+82                                1.5e-06  71_[1]_18
+29                                2.8e-06  19_[1]_70
+28                                2.8e-06  18_[1]_71
+27                                3.4e-06  17_[1]_72
+79                                6.6e-05  68_[1]_21
+78                                6.6e-05  67_[1]_22
+30                                7.9e-05  20_[1]_69
+81                                0.00011  70_[1]_19
+80                                0.00011  69_[1]_20
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 in BLOCKS format
+	Motif mnmlmomjmmlm MEME-1 in BLOCKS format
 --------------------------------------------------------------------------------
-BL   MOTIF mlrrefyvfionm width=13 seqs=67
-91                       (   80) llrrefyvfionm  1 
-90                       (   79) llrrefyvfionm  1 
-89                       (   78) llrrefyvfionm  1 
-84                       (   73) llrrefywfionm  1 
-83                       (   72) llrrefywfionm  1 
-82                       (   71) llrrefyvfionm  1 
-81                       (   70) llrrefyvfionm  1 
-70                       (   59) llrsedyxfhonm  1 
-69                       (   58) llrsedyxfhonm  1 
-68                       (   57) llrsedyxfhonm  1 
-43                       (   32) llrrefxvgionm  1 
-88                       (   77) lmrrefyvfionm  1 
-87                       (   76) lmrrefyvfionm  1 
-80                       (   69) lmrrefyvfionm  1 
-42                       (   31) llrseexwgionm  1 
-79                       (   68) lmrrefxvgionm  1 
-86                       (   75) lmrqegyvfionm  1 
-85                       (   74) lmrqegyvfionm  1 
-78                       (   67) lmrqegxvgionm  1 
-67                       (   56) llssddyxfhonm  1 
-66                       (   55) llssddyxfhonm  1 
-48                       (   37) mlqtgdwxghonm  1 
-51                       (   40) mlqrgfvvhionm  1 
-44                       (   33) mlqrffwvgionm  1 
-49                       (   38) mlqsgewwgionm  1 
-47                       (   36) mlqtgdvxhhonm  1 
-39                       (   28) mkqtgcwxhhonm  1 
-52                       (   41) mlqrhfvvhionm  1 
-50                       (   39) mlqsgevwhionm  1 
-38                       (   27) mlqqggwuhionm  1 
-57                       (   45) omkqufawghonm  1 
-61                       (   50) mmqrgfvvhionm  1 
-77                       (   66) mmqqggwvgionm  1 
-76                       (   65) mmqqggwvgionm  1 
-71                       (   60) lmrpehyufjonm  1 
-58                       (   46) omkqugawghonm  1 
-56                       (   44) omkqvfawghonm  1 
-63                       (   52) mlprhevwhionm  1 
-75                       (   64) mmqqfgwvgionm  1 
-65                       (   54) mlpsiduxhhonm  1 
-62                       (   51) mmprhfvvhionm  1 
-64                       (   53) mlprieuwhionm  1 
-46                       (   35) mkqtgcvyhhonm  1 
-45                       (   34) mkqtfcwyghonm  1 
-41                       (   30) mlpsheuwiionm  1 
-40                       (   29) mkpthcuxihonm  1 
-74                       (   63) mmqpfhwugionm  1 
-73                       (   62) mmrpfhxugionm  1 
-55                       (   43) omkpvhavhhonm  1 
-53                       (   41) omjqvhavhhonm  1 
-54                       (   42) omjpvhavhhonm  1 
-100                      (   89) mmoqjftviionm  1 
-72                       (   61) mmrpfhxugjonm  1 
-59                       (   47) nmkqugbwghonm  1 
-60                       (   48) nmkqugbvhhonm  1 
-97                       (   86) nlorkfswiionm  1 
-96                       (   85) nlorkfswiionm  1 
-98                       (   87) nlorjfswiionm  1 
-35                       (   24) mlorkfrvjinnm  1 
-99                       (   88) nmoqjfsviionm  1 
-34                       (   23) mmopkirtjjnnm  1 
-95                       (   84) nlnrkfrwjinnm  1 
-94                       (   83) nlnrkfrwjinnm  1 
-93                       (   82) nlnrlfrwjinnm  1 
-92                       (   81) nlnrlfrvjinnm  1 
-36                       (   25) nlnrlfqvkinnm  1 
-37                       (   26) nlnqlgqukinnm  1 
+BL   MOTIF mnmlmomjmmlm width=12 seqs=72
+42                       (   31) knsjbqyjfnnl  1 
+43                       (   32) knskbpykfnnl  1 
+52                       (   41) knskboykfnnl  1 
+44                       (   33) knqkepvkhnnl  1 
+51                       (   40) knskaokennlm  1 
+50                       (   39) knslaolennlm  1 
+49                       (   38) jntlaolennlm  1 
+41                       (   30) mnljoqkjnnll  1 
+40                       (   29) mnljoqkjnnll  1 
+55                       (   44) klrodkxoflnl  1 
+53                       (   42) klsobjyoflnm  1 
+54                       (   43) klrodjxoflnm  1 
+60                       (   50) monhlsnimnlm  1 
+62                       (   52) mplhntmimnlm  1 
+61                       (   51) molhnsmimnlm  1 
+56                       (   46) lnojkqojlmlm  1 
+47                       (   37) mplhnslimmlm  1 
+58                       (   48) lonilroimmlm  1 
+48                       (   37) jmtlanlemnlm  1 
+57                       (   47) lnnjlqojmmlm  1 
+59                       (   49) monilrnimmlm  1 
+91                       (   81) molinrmimmlm  1 
+90                       (   80) molinrmimmlm  1 
+89                       (   79) moljnqmjmmlm  1 
+63                       (   53) mpmhmtmimnlm  1 
+65                       (   55) mpmgmtmimnlm  1 
+64                       (   54) mpmgmtmimnlm  1 
+77                       (   67) momhmsmimnlm  1 
+76                       (   66) momhmsmimnlm  1 
+75                       (   65) momhmsmimnlm  1 
+74                       (   64) momhmsmimnlm  1 
+46                       (   36) mpmhnsmimmlm  1 
+36                       (   25) mmllooklnmll  1 
+73                       (   63) momimrmimnlm  1 
+72                       (   62) momimrmimnlm  1 
+88                       (   78) momjnqmjmmlm  1 
+87                       (   77) mnmjnqmjmmlm  1 
+33                       (   23) mnmknpmjmmlm  1 
+32                       (   22) mnmknpmjmmlm  1 
+35                       (   23) mmmlloojlnml  1 
+39                       (   28) mnmjmqmjmnml  1 
+99                       (   86) mmmllomjmoll  1 
+100                      (   87) mmmlmomjnoll  1 
+71                       (   61) momimrmjmmlm  1 
+70                       (   60) momimrmjmmlm  1 
+95                       (   83) mnmklonllmmm  1 
+94                       (   82) mnmklonllmmm  1 
+93                       (   81) mnmklonllmmm  1 
+86                       (   76) mnmjmqmjmmlm  1 
+69                       (   59) mnmjmqmjmmlm  1 
+68                       (   58) mnmjmqmjmmlm  1 
+67                       (   57) mnmkmpmjmmlm  1 
+66                       (   56) mnmkmpmjmmlm  1 
+37                       (   25) mmmllonkmnml  1 
+45                       (   34) kmqmenvmhmnl  1 
+85                       (   75) mnmkmpmkmmlm  1 
+84                       (   74) mnmkmpmkmmlm  1 
+97                       (   86) nmllnomllmml  1 
+92                       (   80) mnmklonlmmmm  1 
+34                       (   22) mmmlmonjmnml  1 
+96                       (   85) nmllnnmllmml  1 
+98                       (   87) mmllmomllmml  1 
+83                       (   73) mmmlmomkmmlm  1 
+82                       (   72) mmmlmomkmmlm  1 
+29                       (   20) mmmlnollmmmm  1 
+28                       (   19) mmmlnollmmmm  1 
+27                       (   18) mmmllomllmmm  1 
+79                       (   69) mlmmmnmlmmlm  1 
+78                       (   68) mlmmmnmlmmlm  1 
+30                       (   21) mmmlmomlmmmm  1 
+81                       (   71) mmmmmnmkmmlm  1 
+80                       (   70) mmmmmnmkmmlm  1 
 //
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 position-specific scoring matrix
+	Motif mnmlmomjmmlm MEME-1 position-specific scoring matrix
 --------------------------------------------------------------------------------
-log-odds matrix: alength= 26 w= 13 n= 8892 bayes= 9.20897 E= 2.9e-979 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    555    413   -234    341  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    485    626    413  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    407    543  -1271  -1271   -334    364    543    611    586    399  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    565    611    621    631    650  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271    478    681    404    534    395    241    465    543    309  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    533    381  -1271  -1271  -1271  -1271 
- -1271  -1271    692    678    507    636    534    443    141  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
-   702    665  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    311    399    499    392    533    481    570    574    702  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    392    592    672    655    647    385  -1271 
- -1271  -1271  -1271  -1271  -1271    563    605    562    421    565    385  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271    595    686    465  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271   -292    671  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271     14  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
- -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271    544  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271  -1271 
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 position-specific probability matrix
---------------------------------------------------------------------------------
-letter-probability matrix: alength= 26 w= 13 nsites= 67 E= 2.9e-979 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.328358  0.402985  0.179104  0.089552  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.059701  0.537313  0.402985  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.029851  0.089552  0.000000  0.000000  0.089552  0.104478  0.089552  0.238806  0.328358  0.029851  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.104478  0.238806  0.417910  0.149254  0.089552  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.029851  0.298507  0.089552  0.164179  0.074627  0.029851  0.044776  0.089552  0.059701  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.059701  0.059701  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.059701  0.119403  0.089552  0.447761  0.164179  0.104478  0.014925  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.089552  0.029851  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.029851  0.089552  0.059701  0.014925  0.059701  0.119403  0.149254  0.089552  0.268657  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.014925  0.089552  0.447761  0.268657  0.149254  0.029851  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.268657  0.268657  0.238806  0.104478  0.089552  0.029851  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.298507  0.656716  0.044776  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.119403  0.880597  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
- 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+log-odds matrix: alength= 26 w= 12 n= 8996 bayes= 7.08889 E= 4.8e-348 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    285    510     94    -29    109  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    168   -183    479    535    581  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    294    -65    209    135  -1281    423    468    581    533  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281    655    676    533    543    558    352   -375  -1281    294  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+   681    681  -1281    655    533  -1281  -1281  -1281  -1281  -1281    178    294   -122    400    294  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    285    178  -1281  -1281    290    581    623    681    668    623    633  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    378    194    -68    309    335  -1281  -1281  -1281  -1281  -1281  -1281    655  -1281    581    681  -1281 
+ -1281  -1281  -1281  -1281    633  -1281  -1281  -1281    650    631    510    316   -606  -1281    294  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281    691  -1281    443  -1281  -1281  -1281    252    -49    290  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281     94    -72    479    235  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    497   -217    309  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
+ -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281    352    -32  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281  -1281 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-	Motif mlrrefyvfionm MEME-1 regular expression
+	Motif mnmlmomjmmlm MEME-1 position-specific probability matrix
 --------------------------------------------------------------------------------
-[ml][lm][rq][rq]efy[vw][fgh][ih]onm
+letter-probability matrix: alength= 26 w= 12 nsites= 72 E= 4.8e-348 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.027778  0.138889  0.041667  0.763889  0.027778  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.069444  0.263889  0.361111  0.222222  0.083333  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.166667  0.597222  0.055556  0.013889  0.000000  0.027778  0.027778  0.083333  0.027778  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.027778  0.138889  0.111111  0.166667  0.194444  0.250000  0.069444  0.000000  0.041667  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.055556  0.055556  0.000000  0.027778  0.027778  0.000000  0.000000  0.000000  0.000000  0.000000  0.013889  0.166667  0.402778  0.208333  0.041667  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.027778  0.013889  0.000000  0.000000  0.097222  0.305556  0.111111  0.166667  0.111111  0.111111  0.055556  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.055556  0.083333  0.583333  0.111111  0.055556  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.027778  0.000000  0.027778  0.055556  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.055556  0.000000  0.000000  0.000000  0.250000  0.305556  0.138889  0.194444  0.013889  0.000000  0.041667  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.083333  0.000000  0.027778  0.000000  0.000000  0.000000  0.125000  0.666667  0.097222  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.041667  0.569444  0.361111  0.027778  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.680556  0.208333  0.111111  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.250000  0.750000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif mnmlmomjmmlm MEME-1 regular expression
+--------------------------------------------------------------------------------
+m[nmo]ml[mn]om[ji]m[mn][lm][ml]
 --------------------------------------------------------------------------------
 
 
 
 
-Time  6.52 secs.
+Time  7.92 secs.
 
 ********************************************************************************
 
@@ -482,105 +495,105 @@ SUMMARY OF MOTIFS
 SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
 -------------            ----------------  -------------
 1                                1.00e+00  101
-2                                8.86e-01  101
-3                                8.86e-01  101
-4                                8.86e-01  101
-5                                8.86e-01  101
-6                                8.86e-01  101
-7                                8.86e-01  101
-8                                8.86e-01  101
-9                                8.86e-01  101
-10                               8.86e-01  101
-11                               8.86e-01  101
-12                               8.86e-01  101
-13                               8.86e-01  101
-14                               8.86e-01  101
-15                               8.86e-01  101
-16                               8.86e-01  101
-17                               8.86e-01  101
-18                               8.86e-01  101
-19                               8.86e-01  101
-20                               8.86e-01  101
-21                               8.86e-01  101
-22                               8.86e-01  101
-23                               7.31e-01  101
-24                               7.31e-01  101
-25                               7.31e-01  101
-26                               6.88e-01  101
-27                               6.88e-01  101
-28                               6.74e-02  101
-29                               2.41e-03  21_[1(2.71e-05)]_67
-30                               2.06e-03  22_[1(2.32e-05)]_66
-31                               2.63e-02  101
-32                               2.63e-02  101
-33                               8.01e-07  21_[1(9.00e-09)]_67
-34                               3.72e-15  22_[1(4.18e-17)]_66
-35                               1.46e-17  23_[1(1.64e-19)]_65
-36                               3.72e-14  24_[1(4.18e-16)]_64
-37                               6.54e-14  25_[1(7.35e-16)]_63
-38                               1.71e-20  26_[1(1.92e-22)]_62
-39                               1.24e-20  27_[1(1.39e-22)]_61
-40                               1.45e-19  28_[1(1.63e-21)]_60
-41                               1.17e-19  29_[1(1.32e-21)]_59
-42                               1.53e-22  30_[1(1.72e-24)]_58
-43                               1.35e-23  31_[1(1.51e-25)]_57
-44                               5.13e-21  32_[1(5.77e-23)]_56
-45                               1.17e-19  33_[1(1.32e-21)]_55
-46                               1.17e-19  34_[1(1.32e-21)]_54
-47                               7.42e-21  35_[1(8.34e-23)]_53
-48                               2.30e-21  36_[1(2.59e-23)]_52
-49                               6.18e-21  37_[1(6.94e-23)]_51
-50                               1.71e-20  38_[1(1.92e-22)]_50
-51                               5.13e-21  39_[1(5.77e-23)]_49
-52                               1.71e-20  40_[1(1.92e-22)]_48
-53                               4.77e-19  40_[1(5.42e-21)]_47
-54                               6.08e-19  41_[1(6.91e-21)]_46
-55                               2.70e-19  42_[1(3.07e-21)]_45
-56                               5.83e-20  43_[1(6.63e-22)]_44
-57                               2.28e-20  44_[1(2.60e-22)]_43
-58                               5.17e-20  45_[1(5.87e-22)]_42
-59                               1.96e-18  46_[1(2.23e-20)]_41
-60                               2.55e-18  47_[1(2.90e-20)]_40
-61                               3.08e-20  49_[1(3.46e-22)]_39
-62                               1.05e-19  50_[1(1.18e-21)]_38
-63                               6.65e-20  51_[1(7.47e-22)]_37
-64                               1.17e-19  52_[1(1.32e-21)]_36
-65                               7.47e-20  53_[1(8.40e-22)]_35
-66                               2.30e-21  54_[1(2.59e-23)]_34
-67                               2.30e-21  55_[1(2.59e-23)]_33
-68                               9.50e-24  56_[1(1.07e-25)]_32
-69                               9.50e-24  57_[1(1.07e-25)]_31
-70                               9.50e-24  58_[1(1.07e-25)]_30
-71                               4.04e-20  59_[1(4.54e-22)]_29
-72                               7.93e-19  60_[1(8.91e-21)]_28
-73                               2.20e-19  61_[1(2.48e-21)]_27
-74                               2.20e-19  62_[1(2.48e-21)]_26
-75                               7.47e-20  63_[1(8.40e-22)]_25
-76                               3.53e-20  64_[1(3.97e-22)]_24
-77                               3.53e-20  65_[1(3.97e-22)]_23
-78                               2.30e-21  66_[1(2.59e-23)]_22
-79                               4.43e-22  67_[1(4.98e-24)]_21
-80                               1.53e-22  68_[1(1.72e-24)]_20
-81                               3.76e-24  69_[1(4.23e-26)]_19
-82                               3.76e-24  70_[1(4.23e-26)]_18
-83                               3.76e-24  71_[1(4.23e-26)]_17
-84                               3.76e-24  72_[1(4.23e-26)]_16
-85                               9.47e-22  73_[1(1.06e-23)]_15
-86                               9.47e-22  74_[1(1.06e-23)]_14
-87                               1.53e-22  75_[1(1.72e-24)]_13
-88                               1.53e-22  76_[1(1.72e-24)]_12
-89                               3.76e-24  77_[1(4.23e-26)]_11
-90                               3.76e-24  78_[1(4.23e-26)]_10
-91                               3.76e-24  79_[1(4.23e-26)]_9
-92                               1.31e-14  80_[1(1.47e-16)]_8
-93                               1.31e-14  81_[1(1.47e-16)]_7
-94                               4.91e-15  82_[1(5.52e-17)]_6
-95                               4.91e-15  83_[1(5.52e-17)]_5
-96                               2.94e-18  84_[1(3.30e-20)]_4
-97                               2.94e-18  85_[1(3.30e-20)]_3
-98                               4.85e-18  86_[1(5.45e-20)]_2
-99                               1.77e-17  87_[1(1.99e-19)]_1
-100                              7.93e-19  88_[1(8.91e-21)]
+2                                1.00e+00  101
+3                                1.00e+00  101
+4                                7.88e-01  101
+5                                7.88e-01  101
+6                                7.88e-01  101
+7                                7.88e-01  101
+8                                9.51e-02  101
+9                                9.51e-02  101
+10                               9.51e-02  101
+11                               9.51e-02  101
+12                               9.51e-02  101
+13                               9.51e-02  101
+14                               1.89e-01  101
+15                               1.89e-01  101
+16                               9.51e-02  101
+17                               9.83e-01  101
+18                               9.99e-01  101
+19                               1.89e-01  101
+20                               1.89e-01  101
+21                               9.99e-01  101
+22                               8.24e-01  101
+23                               4.66e-01  101
+24                               7.85e-01  101
+25                               7.85e-01  101
+26                               2.03e-01  101
+27                               3.09e-04  17_[1(3.43e-06)]_72
+28                               2.53e-04  18_[1(2.81e-06)]_71
+29                               2.53e-04  19_[1(2.81e-06)]_70
+30                               7.05e-03  20_[1(7.86e-05)]_69
+31                               5.09e-01  101
+32                               1.57e-08  21_[1(1.74e-10)]_68
+33                               1.57e-08  22_[1(1.74e-10)]_67
+34                               2.72e-06  21_[1(3.02e-08)]_68
+35                               2.37e-08  22_[1(2.63e-10)]_67
+36                               3.37e-09  24_[1(3.74e-11)]_65
+37                               4.56e-07  24_[1(5.07e-09)]_65
+38                               1.07e-01  101
+39                               8.87e-08  27_[1(9.85e-10)]_62
+40                               6.14e-16  28_[1(6.83e-18)]_61
+41                               6.14e-16  29_[1(6.83e-18)]_60
+42                               5.45e-25  30_[1(6.05e-27)]_59
+43                               4.66e-24  31_[1(5.17e-26)]_58
+44                               8.58e-21  32_[1(9.53e-23)]_57
+45                               6.53e-07  33_[1(7.25e-09)]_56
+46                               2.92e-09  35_[1(3.25e-11)]_54
+47                               2.57e-11  36_[1(2.85e-13)]_53
+48                               3.51e-11  36_[1(3.94e-13)]_52
+49                               2.72e-16  37_[1(3.06e-18)]_51
+50                               1.49e-17  38_[1(1.68e-19)]_50
+51                               2.28e-19  39_[1(2.56e-21)]_49
+52                               1.07e-23  40_[1(1.19e-25)]_49
+53                               1.66e-14  41_[1(1.84e-16)]_48
+54                               1.26e-13  42_[1(1.40e-15)]_47
+55                               7.76e-15  43_[1(8.62e-17)]_46
+56                               2.57e-11  45_[1(2.85e-13)]_44
+57                               6.68e-11  46_[1(7.42e-13)]_43
+58                               3.55e-11  47_[1(3.94e-13)]_42
+59                               1.26e-10  48_[1(1.39e-12)]_41
+60                               5.26e-13  49_[1(5.85e-15)]_40
+61                               2.96e-12  50_[1(3.29e-14)]_39
+62                               2.11e-12  51_[1(2.34e-14)]_38
+63                               2.19e-09  52_[1(2.44e-11)]_37
+64                               2.54e-09  53_[1(2.82e-11)]_36
+65                               2.54e-09  54_[1(2.82e-11)]_35
+66                               4.56e-07  55_[1(5.07e-09)]_34
+67                               4.56e-07  56_[1(5.07e-09)]_33
+68                               4.04e-07  57_[1(4.49e-09)]_32
+69                               4.04e-07  58_[1(4.49e-09)]_31
+70                               2.78e-07  59_[1(3.09e-09)]_30
+71                               2.78e-07  60_[1(3.09e-09)]_29
+72                               5.93e-09  61_[1(6.58e-11)]_28
+73                               5.93e-09  62_[1(6.58e-11)]_27
+74                               2.92e-09  63_[1(3.25e-11)]_26
+75                               2.92e-09  64_[1(3.25e-11)]_25
+76                               2.92e-09  65_[1(3.25e-11)]_24
+77                               2.92e-09  66_[1(3.25e-11)]_23
+78                               5.91e-03  67_[1(6.59e-05)]_22
+79                               5.91e-03  68_[1(6.59e-05)]_21
+80                               1.01e-02  101
+81                               1.01e-02  101
+82                               1.35e-04  71_[1(1.50e-06)]_18
+83                               1.35e-04  72_[1(1.50e-06)]_17
+84                               9.39e-07  73_[1(1.04e-08)]_16
+85                               9.39e-07  74_[1(1.04e-08)]_15
+86                               4.04e-07  75_[1(4.49e-09)]_14
+87                               1.37e-08  76_[1(1.52e-10)]_13
+88                               9.03e-09  77_[1(1.00e-10)]_12
+89                               6.75e-10  78_[1(7.50e-12)]_11
+90                               5.81e-10  79_[1(6.46e-12)]_10
+91                               5.81e-10  80_[1(6.46e-12)]_9
+92                               2.72e-06  79_[1(3.02e-08)]_10
+93                               4.04e-07  80_[1(4.49e-09)]_9
+94                               4.04e-07  81_[1(4.49e-09)]_8
+95                               4.04e-07  82_[1(4.49e-09)]_7
+96                               8.25e-06  84_[1(9.16e-08)]_5
+97                               1.69e-06  85_[1(1.88e-08)]_4
+98                               6.04e-05  86_[1(6.71e-07)]_3
+99                               1.15e-07  85_[1(1.28e-09)]_4
+100                              1.68e-07  86_[1(1.86e-09)]_3
 --------------------------------------------------------------------------------
 
 ********************************************************************************
