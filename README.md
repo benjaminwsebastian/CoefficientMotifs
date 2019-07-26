@@ -77,10 +77,10 @@ Here are the commands to recreate this for polynomials of degree 1 to 6:
 ```
 
 ## Prerequisites
-[meme](http://meme-suite.org/doc/download.html)
-Beautiful Soup
-NumPy
-matplotlib
-seaborn
-argparse
-json
+[meme](http://meme-suite.org/doc/download.html)\
+Beautiful Soup\
+NumPy\
+matplotlib\
+seaborn\
+argparse\
+json\
