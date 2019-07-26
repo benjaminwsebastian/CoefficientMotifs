@@ -83,4 +83,4 @@ NumPy\
 matplotlib\
 seaborn\
 argparse\
-json\
+json
