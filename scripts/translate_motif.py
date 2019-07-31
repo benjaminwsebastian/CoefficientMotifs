@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3
 import string,json,argparse
 import numpy as np
 from bs4 import BeautifulSoup
@@ -11,7 +11,7 @@ This script reads the meme output file and prints the motif as a sequence of val
 ## INPUT ##
 ###########
 
-def getArgs():
+def get_args():
     parser = argparse.ArgumentParser(description="translate motif back into numbers, can scrape meme.hmtl for motif or take a motif", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--f",type=str,required=False,help="meme output file (html)",default='')
     parser.add_argument("--motif",type=str,required=False,help="motif",default='')
@@ -28,7 +28,7 @@ def getArgs():
 '''
 from matplotlib source code
 '''
-def symlogShift(arr, shift=0):
+def symlog_shift(arr, shift=0):
     # shift array-like to symlog array with shift
     logv = np.abs(arr)*(10.**shift)
     logv[np.where(logv<1.)] = 1.
@@ -42,15 +42,15 @@ def unlog10(arr):
         unlogged.append(sgn*(10**coeff))
     return unlogged
 
-def findMotifInfo(fileName):
+def find_motif_info(fileName):
     with open(fileName,'r') as f:
         contents = f.read()
 
         soup = BeautifulSoup(contents, 'lxml')
         text = soup.head.text
-        frontTrimmed = text.rsplit('=')[1][1:] # Have to trim because meme didn't format the html output nicely
-        backTrimmed = frontTrimmed.rsplit(';')[0]
-        info = json.loads(backTrimmed)
+        front_trimmed = text.rsplit('=')[1][1:] # Have to trim because meme didn't format the html output nicely
+        back_trimmed = front_trimmed.rsplit(';')[0]
+        info = json.loads(back_trimmed)
         
         motif = info['motifs'][0]['id']
         nsites = info['motifs'][0]['nsites']
@@ -61,18 +61,18 @@ def findMotifInfo(fileName):
 ## MAIN ##
 ##########
 
-args = getArgs()
-fileName = args.f
+args = get_args()
+file_name = args.f
 motif = args.motif
 unlog = args.unlog
-binsFile = args.bins
+bins_file = args.bins
 
 alphabet = list(string.ascii_letters)
-IN = open(binsFile)
+IN = open(bins_file)
 bins = json.load(IN)
 
-if fileName != '':
-    motif,nsites = findMotifInfo(fileName)
+if file_name != '':
+    motif,nsites = find_motif_info(file_name)
 
 approx = []
 for element in motif:
@@ -80,9 +80,9 @@ for element in motif:
     approx.append((bins[index]+bins[index+1])/2.0)
 
 
-print 'motif: %s\nNsites: %s' % (motif,nsites)
+print('motif: %s\nNsites: %s' % (motif,nsites))
 
 if unlog:
-    print unlog10(approx)
+    print(unlog10(approx))
 else:
-    print approx
+    print(approx)

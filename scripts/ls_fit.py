@@ -1,12 +1,10 @@
-#!/bin/python
+#!/bin/python3
 import numpy as np
 import matplotlib as mpl
 mpl.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 import string,json,argparse
-
-# TODO: put the poly in coeffs > poly[x] to coeffs[poly][x] OR change coeffs into a list -- see if doing that affects other parts of the code
 
 '''
 This script takes an tab delimited file of 2D data.
@@ -23,7 +21,7 @@ It does three things:
 ## INPUT ##
 ###########
 
-def getArgs():
+def get_args():
     parser = argparse.ArgumentParser(description="translate motif back into numbers, can scrape meme.hmtl for motif or take a motif", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--f",type=str,required=True,help="input data file (tab delimited)",default='')
     parser.add_argument("--o",type=str,required=True,help="output name")
@@ -34,7 +32,7 @@ def getArgs():
     args = parser.parse_args()
     return args
 
-def readDataFile(dataFile):
+def read_data_file(dataFile):
     xs,ys = [],[]
     for line in open(dataFile,'r'):
         x,y = line.strip().split('\t')
@@ -49,7 +47,7 @@ def readDataFile(dataFile):
 '''
 from matplotlib source code
 '''
-def symlogShift(arr, shift=0):
+def symlog_shift(arr, shift=0):
     # shift array-like to symlog array with shift
     logv = np.abs(arr)*(10.**shift)
     logv[np.where(logv<1.)] = 1.
@@ -60,25 +58,23 @@ def symlogShift(arr, shift=0):
 ## MAIN ##
 ##########
 
-args = getArgs()
-dataFile = args.f
-n0 = args.n
+args = get_args()
+data_file = args.f
+HIGHEST_POLY = args.n
 symlog = args.symlog
-outName = args.o
+OUT_NAME = args.o
 label = args.label
-
-highestPoly = n0
 
 errors = []
 polys = {}
 coeffs = []
 
-x,y = readDataFile(dataFile)
+x,y = read_data_file(data_file)
 
 '''
 Fit the polynomials to the data
 '''
-for i in range(highestPoly):
+for i in range(HIGHEST_POLY):
     coeffs.append(np.polyfit(x,y,i+1))
     polys[i] = np.poly1d(coeffs[i])
 
@@ -94,7 +90,7 @@ plt.plot(x,y,'go',markersize = 1)
 
 if symlog:
     plt.yscale('symlog')
-plt.title('%s %d' % ('Poly Fit With Highest Degree',highestPoly))
+plt.title('%s %d' % ('Poly Fit With Highest Degree', HIGHEST_POLY))
 plt.xlabel('x')
 plt.ylabel('y')
 
@@ -104,32 +100,32 @@ Plot heatmap of coefficients
 chart = []
 for poly in coeffs:
     if symlog:
-        coeffs[coeffs.index(poly)] = symlogShift(poly)
-    chart.append( np.concatenate([ poly[::-1] , np.zeros(highestPoly-len(poly)+1) ]) ) # add coefficients in reverve order so they are smallest to largest with respect to their powers and zero fill
+        coeffs[coeffs.index(poly)] = symlog_shift(poly)
+    chart.append( np.concatenate([ poly[::-1] , np.zeros(HIGHEST_POLY-len(poly)+1) ]) ) # add coefficients in reverve order so they are smallest to largest with respect to their powers and zero fill
 
 plt.subplot(212)
 sns.heatmap(chart,yticklabels=False,annot_kws={"size":2}) # can add vmin= and vmax= for labeling the bar, center=0 for making the bar centered at 0, cmap='Blues' for an alternative color scheme, can define rowLabels and set yticklabels=rowLabels but not advised because it gets crowded quickly
 plt.xlabel("coefficients")
 plt.ylabel("highest degree (n)")
-plt.title("Heat Map of the Size of Coefficients For Each Polynomial up to "+str(n0))
+plt.title("Heat Map of the Size of Coefficients For Each Polynomial up to "+str(HIGHEST_POLY))
 
 '''
 Plot distribution of coefficients
 ''' 
-coeffsList = np.array([])
-for polyIndex in range(len(coeffs)):
-    coeffsList = np.concatenate([ coeffsList, coeffs[polyIndex][0:polyIndex] ]) # only adding to the ith term because the remaining is zero-filled and keeping those would skew the histogram.
+coeffs_list = np.array([])
+for poly_index in range(len(coeffs)):
+    coeffs_list = np.concatenate([ coeffs_list, coeffs[poly_index][0:poly_index] ]) # only adding to the ith term because the remaining is zero-filled and keeping those would skew the histogram.
     
 plt.subplot(222)
-maxCoeff = max(coeffsList)
-minCoeff = min(coeffsList)
-binWidth = (maxCoeff-minCoeff)/26.
+max_coeff = max(coeffs_list)
+min_coeff = min(coeffs_list)
+bin_width = (max_coeff-min_coeff)/26.
 
-n, bins, bars = plt.hist(coeffsList,bins=np.arange(minCoeff,maxCoeff,binWidth),normed=1,color='r')
+n, bins, bars = plt.hist(coeffs_list,bins=np.arange(min_coeff,max_coeff,bin_width),normed=1,color='r')
 plt.title("Distribution of coefficients")
 plt.xlabel("symlog of coefficient")
 plt.tight_layout()
-plt.savefig(outName+'_n'+str(n0)+'.pdf')
+plt.savefig(OUT_NAME+'_n'+str(HIGHEST_POLY)+'.pdf')
 
 '''
 Transform coeff data into a sequence of letters then print to fasta file
@@ -145,9 +141,9 @@ for i in chart: # i is the sequence of coefficients corresponding to one fitted 
     seq = ''.join(seq)
     seqs.append(seq)
 
-OUT = open(outName+'_n'+str(n0)+'_coeffSeqs.fasta','w')
+OUT = open(OUT_NAME+'_n'+str(HIGHEST_POLY)+'_coeff_seqs.fasta','w')
 for i in range(len(seqs)):
     OUT.write('>%d\n%s\n' % (i+1,seqs[i]))
 
-OUT = open(outName+'_n'+str(n0)+'_bins.json','w')
+OUT = open(OUT_NAME+'_n'+str(HIGHEST_POLY)+'_bins.json','w')
 json.dump(bins.tolist(),OUT)

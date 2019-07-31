@@ -3,7 +3,7 @@
 for i in {1..6}
 do
     echo "Main coefficient motif for n = $i"
-    cd "$i/memeOutput"
-    python ../../scripts/translateMotif.py --f meme.html --bins ../"n$i"_"n100"_"bins.json"
+    cd "$i/MEME_OUTPUT"
+    python3 ../../scripts/translate_motif.py --f meme.html --bins ../"n$i"_"n100"_"bins.json"
     cd ../..
 done
