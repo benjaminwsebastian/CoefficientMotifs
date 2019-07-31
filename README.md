@@ -61,7 +61,7 @@ nonpqnnopooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 Now I will run "meme" on it to get the motif. "meme" is part of the MEME Suite, a motif-based sequence analysis tool which can detect denovo motifs, which is specifically made for DNA or RNA sequences. However I can define a new alphabet and give it as an input.
 
-Running **translateMotif.py** on the output gives the motif, number of sites and an approximate translation of it back into numbers:
+Running **translate_motif.py** on the output gives the motif, number of sites and an approximate translation of it back into numbers:
 ```
 motif: nomptsjiqnnooo
 Nsites: 76
